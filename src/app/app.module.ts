@@ -15,6 +15,7 @@ import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { LoadingInterceptor } from './services/loading.interceptor';
+import { PaginatorModule } from 'primeng/paginator';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { LoadingInterceptor } from './services/loading.interceptor';
     TableModule,
     DialogModule,
     ProgressSpinnerModule,
+    PaginatorModule,
     HttpClientModule,
   ],
   providers: [

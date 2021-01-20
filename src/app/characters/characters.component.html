@@ -28,6 +28,7 @@
     </tr>
   </ng-template>
 </p-table>
+<p-paginator [rows]="10" [totalRecords]="totalPages" (onPageChange)="paginate($event)"></p-paginator>
 
 <p-dialog
   [(visible)]="characterDialog"

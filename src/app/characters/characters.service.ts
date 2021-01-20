@@ -10,7 +10,7 @@ export class CharactersService {
 
   constructor(private http: HttpClient) {}
 
-  getCharacters(){
-    return this.http.get<Characters>(`${environment.api}/people/`);
+  getCharacters(url?: string){
+    return this.http.get<Characters>(url ? `${environment.api}/people/${url}` : `${environment.api}/people/`);
   }
 }
