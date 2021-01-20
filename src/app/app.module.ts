@@ -14,7 +14,7 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
-import { InterceptorServiceService } from './services/interceptor-service';
+import { LoadingInterceptor } from './services/loading.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +37,7 @@ import { InterceptorServiceService } from './services/interceptor-service';
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: InterceptorServiceService,
+      useClass: LoadingInterceptor,
       multi: true,
     },
   ],

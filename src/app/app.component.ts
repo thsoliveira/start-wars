@@ -30,7 +30,6 @@ export class AppComponent implements AfterViewInit {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
     this.loaderService.loader.pipe(delay(0)).subscribe((isLoading) => {
-      console.log(isLoading);
       this.isLoading = isLoading;
     });
   }
